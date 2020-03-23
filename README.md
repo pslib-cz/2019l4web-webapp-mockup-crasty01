@@ -7,6 +7,10 @@
 - Herní pole je čtvercový grid o jedenácti sloupcích, začínající ze shora (dole nemusí končit přesně).
 - Cílem je získat co nejvyšší skóre.
 - Skóre je určeno podle počtu řádků, kolik jsme přešli (každý řádek je připočten pouze jednou).
+- Cestou nahoru se hráč bude setkévat s nepřáteli. Ti budou mít odlišný způsob pohybu. pokud se hráč dostane příliš blížko (na vzdálenost 1 pole) nepřítel se pohne k hráči, potažmo zaůtočí
+- Útok nastane ve chvíli, kdy se hráč (nebo nepřítel) chce pohnout směrem ve kterém je nepřítel (hráč). První útočí hráč (= pokud nepřítele zabije na jednu ránu, nepřítel mu neubere životy).
+- Každý nepřítel má daný počet životů. Ty se odvyjí od druhu nepřítele a jejich levelu.
+- Level nepřátel se bude postupně zvyšovat (podle řádku na kterém se poprvé objeví).
 
 ### SOUBOJ
 - Začíná ve chvíli, když jste 
