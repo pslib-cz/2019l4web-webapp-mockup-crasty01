@@ -108,13 +108,18 @@ Veškeré objekty se umisťují jako <div> se třemi classami:
 
 ### UKÁZKY STAVU
 
-![náhodná chvíle ze hry](./game.png)
+![náhodná chvíle ze hry](./game.png)¨
+<br />
 náhodná chvíle ze hry
-![otevřený inventář](./inventory.png)
+![otevřený inventář](./inventory.png)¨
+<br />
 otevřený inventář
-![otobvřené okno nastavení](./settings.png)
+![otobvřené okno nastavení](./settings.png)¨
+<br />
 otobvřené okno nastavení
-![otevřené staty postavy](./stats.png)
+![otevřené staty postavy](./stats.png)¨
+<br />
 otevřené staty postavy
-![otevřené skilly postavy](./skills.png)
+![otevřené skilly postavy](./skills.png)¨
+<br />
 otevřené skilly postavy
