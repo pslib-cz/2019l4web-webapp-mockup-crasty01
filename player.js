@@ -47,3 +47,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 })
+
+document.addEventListener('DOMContentLoaded', function () {
+  let enemies = document.querySelectorAll('.player, .skeleton, .slime, .bat, .ghost, .reaper, .spider');
+  enemies.forEach(enemy => {
+    enemy.addEventListener('click', function (e) {
+      e.target.classList.add('hit');
+      setTimeout(function () {
+        e.target.classList.remove('hit');
+      }, 500);
+    })
+  });
+})

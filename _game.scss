@@ -1,4 +1,4 @@
-.screen {
+.game {
   position: relative;
 
   & .player {
@@ -26,6 +26,27 @@
         top: calc(#{$i} * #{$size});
       }
     }
+
+    &.hit {
+      z-index: 2;
+
+      &:after {
+        content: '-12';
+        color: $health;
+        position: absolute;
+        left: calc(-5px * #{$ratio});
+        top: calc(5px * #{$ratio});
+        text-shadow: -2px -2px 0 $dark,
+          2px -2px 0 $dark,
+          -2px 2px 0 $dark,
+          2px 2px 0 $dark,
+          -2px 0px 0 $dark,
+          2px 0px 0 $dark,
+          0px -2px 0 $dark,
+          0px 2px 0 $dark;
+        animation: hit-value 500ms ease-in forwards;
+      }
+    }
   }
 
   & .player,
@@ -35,6 +56,7 @@
   & .ghost,
   & .reaper,
   & .spider {
+    cursor: pointer;
     background-size: calc(#{$size} / 32 * 28);
     animation: idle 250ms alternate infinite ease-in-out;
   }
@@ -49,5 +71,17 @@
 
   to {
     transform: scale(calc(15/14), 1);
+  }
+}
+
+@keyframes hit-value {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(calc(-1.2 * #{$size}));
+    opacity: 0;
   }
 }

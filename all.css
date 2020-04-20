@@ -1,9 +1,14 @@
 @charset "UTF-8";
+@font-face {
+  font-family: Pixel;
+  src: url(pixel.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
   line-height: 120%;
   text-decoration: none;
   color: currentColor;
@@ -13,13 +18,14 @@
 
 html,
 body {
-  font-family: Roboto;
+  font-family: Pixel;
   scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   min-height: 100vh;
   font-size: 16px;
   color: #f2c849;
-  overflow-x: hidden;
 }
 
 body {
@@ -38,6 +44,11 @@ body {
       align-content: center;
 }
 
+.all > .wrapper {
+  position: relative;
+  text-shadow: -2px -2px 0 #150940, 2px -2px 0 #150940, -2px 2px 0 #150940, 2px 2px 0 #150940, -2px 0px 0 #150940, 2px 0px 0 #150940, 0px -2px 0 #150940, 0px 2px 0 #150940;
+}
+
 img {
   display: block;
   width: 100%;
@@ -51,21 +62,21 @@ img {
       image-rendering: pixelated;
 }
 
-.screen {
+.game {
   background-color: #150940;
   width: calc(calc(1 * 32px) * 11 * 1);
   height: calc(calc(1 * 32px) * 20 * 1);
 }
 
-.screen {
+.game {
   position: relative;
 }
 
-.screen .player {
+.game .player {
   z-index: 10;
 }
 
-.screen > div {
+.game > div {
   padding: calc(2px * 1);
   -ms-interpolation-mode: nearest-neighbor;
       image-rendering: -webkit-optimize-contrast;
@@ -81,137 +92,153 @@ img {
   transition: left 250ms ease-in-out, top 250ms ease-in-out;
 }
 
-.screen > div.column-0 {
+.game > div.column-0 {
   left: calc(0 * calc(1 * 32px));
 }
 
-.screen > div.column-1 {
+.game > div.column-1 {
   left: calc(1 * calc(1 * 32px));
 }
 
-.screen > div.column-2 {
+.game > div.column-2 {
   left: calc(2 * calc(1 * 32px));
 }
 
-.screen > div.column-3 {
+.game > div.column-3 {
   left: calc(3 * calc(1 * 32px));
 }
 
-.screen > div.column-4 {
+.game > div.column-4 {
   left: calc(4 * calc(1 * 32px));
 }
 
-.screen > div.column-5 {
+.game > div.column-5 {
   left: calc(5 * calc(1 * 32px));
 }
 
-.screen > div.column-6 {
+.game > div.column-6 {
   left: calc(6 * calc(1 * 32px));
 }
 
-.screen > div.column-7 {
+.game > div.column-7 {
   left: calc(7 * calc(1 * 32px));
 }
 
-.screen > div.column-8 {
+.game > div.column-8 {
   left: calc(8 * calc(1 * 32px));
 }
 
-.screen > div.column-9 {
+.game > div.column-9 {
   left: calc(9 * calc(1 * 32px));
 }
 
-.screen > div.column-10 {
+.game > div.column-10 {
   left: calc(10 * calc(1 * 32px));
 }
 
-.screen > div.row-0 {
+.game > div.row-0 {
   top: calc(0 * calc(1 * 32px));
 }
 
-.screen > div.row-1 {
+.game > div.row-1 {
   top: calc(1 * calc(1 * 32px));
 }
 
-.screen > div.row-2 {
+.game > div.row-2 {
   top: calc(2 * calc(1 * 32px));
 }
 
-.screen > div.row-3 {
+.game > div.row-3 {
   top: calc(3 * calc(1 * 32px));
 }
 
-.screen > div.row-4 {
+.game > div.row-4 {
   top: calc(4 * calc(1 * 32px));
 }
 
-.screen > div.row-5 {
+.game > div.row-5 {
   top: calc(5 * calc(1 * 32px));
 }
 
-.screen > div.row-6 {
+.game > div.row-6 {
   top: calc(6 * calc(1 * 32px));
 }
 
-.screen > div.row-7 {
+.game > div.row-7 {
   top: calc(7 * calc(1 * 32px));
 }
 
-.screen > div.row-8 {
+.game > div.row-8 {
   top: calc(8 * calc(1 * 32px));
 }
 
-.screen > div.row-9 {
+.game > div.row-9 {
   top: calc(9 * calc(1 * 32px));
 }
 
-.screen > div.row-10 {
+.game > div.row-10 {
   top: calc(10 * calc(1 * 32px));
 }
 
-.screen > div.row-11 {
+.game > div.row-11 {
   top: calc(11 * calc(1 * 32px));
 }
 
-.screen > div.row-12 {
+.game > div.row-12 {
   top: calc(12 * calc(1 * 32px));
 }
 
-.screen > div.row-13 {
+.game > div.row-13 {
   top: calc(13 * calc(1 * 32px));
 }
 
-.screen > div.row-14 {
+.game > div.row-14 {
   top: calc(14 * calc(1 * 32px));
 }
 
-.screen > div.row-15 {
+.game > div.row-15 {
   top: calc(15 * calc(1 * 32px));
 }
 
-.screen > div.row-16 {
+.game > div.row-16 {
   top: calc(16 * calc(1 * 32px));
 }
 
-.screen > div.row-17 {
+.game > div.row-17 {
   top: calc(17 * calc(1 * 32px));
 }
 
-.screen > div.row-18 {
+.game > div.row-18 {
   top: calc(18 * calc(1 * 32px));
 }
 
-.screen > div.row-19 {
+.game > div.row-19 {
   top: calc(19 * calc(1 * 32px));
 }
 
-.screen .player,
-.screen .skeleton,
-.screen .slime,
-.screen .bat,
-.screen .ghost,
-.screen .reaper,
-.screen .spider {
+.game > div.hit {
+  z-index: 2;
+}
+
+.game > div.hit:after {
+  content: '-12';
+  color: #f83c69;
+  position: absolute;
+  left: calc(-5px * 1);
+  top: calc(5px * 1);
+  text-shadow: -2px -2px 0 #150940, 2px -2px 0 #150940, -2px 2px 0 #150940, 2px 2px 0 #150940, -2px 0px 0 #150940, 2px 0px 0 #150940, 0px -2px 0 #150940, 0px 2px 0 #150940;
+  -webkit-animation: hit-value 500ms ease-in forwards;
+          animation: hit-value 500ms ease-in forwards;
+}
+
+.game .player,
+.game .skeleton,
+.game .slime,
+.game .bat,
+.game .ghost,
+.game .reaper,
+.game .spider {
+  cursor: pointer;
   background-size: calc(calc(1 * 32px) / 32 * 28);
   -webkit-animation: idle 250ms alternate infinite ease-in-out;
           animation: idle 250ms alternate infinite ease-in-out;
@@ -236,6 +263,32 @@ img {
   to {
     -webkit-transform: scale(calc(15/14), 1);
             transform: scale(calc(15/14), 1);
+  }
+}
+
+@-webkit-keyframes hit-value {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(calc(-1.2 * calc(1 * 32px)));
+            transform: translateY(calc(-1.2 * calc(1 * 32px)));
+    opacity: 0;
+  }
+}
+
+@keyframes hit-value {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(calc(-1.2 * calc(1 * 32px)));
+            transform: translateY(calc(-1.2 * calc(1 * 32px)));
+    opacity: 0;
   }
 }
 
@@ -293,5 +346,173 @@ img {
 
 .health-potion {
   background-image: url(imgs/heatlh-potion.png);
+}
+
+.down {
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.up {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.score {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.score > span {
+  text-shadow: -2pxpx -2pxpx 0 #150940, 2pxpx -2pxpx 0 #150940, -2pxpx 2pxpx 0 #150940, 2pxpx 2pxpx 0 #150940, -2pxpx 0px 0 #150940, 2pxpx 0px 0 #150940, 0px -2pxpx 0 #150940, 0px 2pxpx 0 #150940;
+}
+
+.hud {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5fr 3fr 3fr 3fr 3fr;
+      grid-template-columns: 5fr 3fr 3fr 3fr 3fr;
+  -ms-grid-rows: 3fr 2fr;
+      grid-template-rows: 3fr 2fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem;
+      grid-template-areas: "health menu stats inventory settings" "health xp xp xp xp";
+}
+
+.hud > div {
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 0 3px #f2c849;
+          box-shadow: 0 0 0 3px #f2c849;
+  border: #150940 2px solid;
+  margin: 5px;
+  background-color: #150940;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 82%;
+  cursor: pointer;
+}
+
+.hud .health {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: health;
+  position: relative;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
+.hud .health .health-bar-wrapper {
+  -webkit-box-shadow: 0 0 0 3px #f2c849;
+          box-shadow: 0 0 0 3px #f2c849;
+  border: #150940 2px solid;
+  border-radius: 50%;
+  cursor: default;
+  position: relative;
+  width: calc(2* calc(1 * 32px));
+  height: calc(2* calc(1 * 32px));
+  overflow: hidden;
+}
+
+.hud .health .health-bar-wrapper .health-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 75%;
+  background-color: #f83c69;
+}
+
+.hud .health > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-shadow: -2px -2px 0 #150940, 2px -2px 0 #150940, -2px 2px 0 #150940, 2px 2px 0 #150940, -2px 0px 0 #150940, 2px 0px 0 #150940, 0px -2px 0 #150940, 0px 2px 0 #150940;
+  z-index: 10;
+}
+
+.hud .home {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: menu;
+  background-image: url(imgs/home.png);
+}
+
+.hud .stats {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: stats;
+  background-image: url(imgs/player.png);
+}
+
+.hud .inventory {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: inventory;
+  background-image: url(imgs/golden-chest.png);
+}
+
+.hud .settings {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: settings;
+  background-image: url(imgs/settings.png);
+}
+
+.hud .xp {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-area: xp;
+  margin: 10px 2px;
+  cursor: default;
+  position: relative;
+}
+
+.hud .xp .xp-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: 1px;
+  left: 0;
+  width: 87%;
+  background-color: #8CDE4A;
 }
 /*# sourceMappingURL=all.css.map */

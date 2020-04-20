@@ -1,17 +1,26 @@
+@font-face {
+  font-family: Pixel;
+  src: url(pixel.ttf);
+}
+
+
 $dark: #150940;
 $blue-dark: #312a91;
 $blie-ligh: #627af5;
 $gold-dark: #f29849;
 $gold-light: #f2c849;
 $white: #f5f5f5;
+$health: #f83c69;
+$xp: #8CDE4A;
 
 $ratio: 1;
 $size: calc(#{$ratio} * 32px);
+$ts: 2px;
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
   line-height: 120%;
   text-decoration: none;
   color: currentColor;
@@ -21,13 +30,13 @@ $size: calc(#{$ratio} * 32px);
 
 html,
 body {
-  font-family: Roboto;
+  font-family: Pixel;
   scroll-behavior: smooth;
+  box-sizing: border-box;
   width: 100%;
   min-height: 100vh;
   font-size: 16px;
   color: $gold-light;
-  overflow-x: hidden;
 }
 
 body {
@@ -40,6 +49,18 @@ body {
   display: grid;
   justify-content: center;
   align-content: center;
+
+  &>.wrapper {
+    position: relative;
+    text-shadow: -#{$ts} -#{$ts} 0 $dark,
+    #{$ts} -#{$ts} 0 $dark,
+    -#{$ts} #{$ts} 0 $dark,
+    #{$ts} #{$ts} 0 $dark,
+    -#{$ts} 0px 0 $dark,
+    #{$ts} 0px 0 $dark,
+    0px -#{$ts} 0 $dark,
+    0px #{$ts} 0 $dark;
+  }
 }
 
 img {
@@ -50,7 +71,7 @@ img {
   image-rendering: pixelated;
 }
 
-.screen {
+.game {
   background-color: $dark;
   width: calc(#{$size} * 11 * #{$ratio});
   height: calc(#{$size} * 20 * #{$ratio});

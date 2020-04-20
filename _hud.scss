@@ -1,0 +1,147 @@
+.down {
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.up {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.score {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: stretch;
+  align-items: stretch;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem;
+  font-size: 2rem;
+  margin-top: 1rem;
+
+  &>span {
+    text-shadow: -#{$ts}px -#{$ts}px 0 $dark,
+    #{$ts}px -#{$ts}px 0 $dark,
+    -#{$ts}px #{$ts}px 0 $dark,
+    #{$ts}px #{$ts}px 0 $dark,
+    -#{$ts}px 0px 0 $dark,
+    #{$ts}px 0px 0 $dark,
+    0px -#{$ts}px 0 $dark,
+    0px #{$ts}px 0 $dark;
+  }
+}
+
+.hud {
+  display: grid;
+  grid-template-columns: 5fr 3fr 3fr 3fr 3fr;
+  grid-template-rows: 3fr 2fr;
+  justify-content: center;
+  align-content: center;
+  justify-items: stretch;
+  align-items: stretch;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem;
+  grid-template-areas: "health menu stats inventory settings""health xp xp xp xp";
+
+  &>div {
+    border-radius: 4px;
+    box-shadow: 0 0 0 3px $gold-light;
+    border: $dark 2px solid;
+    margin: 5px;
+    background-color: $dark;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 82%;
+    cursor: pointer;
+  }
+
+  & .health {
+    grid-area: health;
+    position: relative;
+    box-shadow: none;
+    border: none;
+
+    .health-bar-wrapper {
+      box-shadow: 0 0 0 3px $gold-light;
+      border: $dark 2px solid;
+      border-radius: 50%;
+      cursor: default;
+      position: relative;
+      width: calc(2* #{$size});
+      height: calc(2* #{$size});
+      overflow: hidden;
+
+      & .health-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 75%;
+        background-color: $health;
+      }
+    }
+
+    &>span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-shadow: -#{$ts} -#{$ts} 0 $dark,
+      #{$ts} -#{$ts} 0 $dark,
+      -#{$ts} #{$ts} 0 $dark,
+      #{$ts} #{$ts} 0 $dark,
+      -#{$ts} 0px 0 $dark,
+      #{$ts} 0px 0 $dark,
+      0px -#{$ts} 0 $dark,
+      0px #{$ts} 0 $dark;
+      z-index: 10;
+    }
+
+
+  }
+
+  & .home {
+    grid-area: menu;
+    background-image: url(imgs/home.png);
+  }
+
+  & .stats {
+    grid-area: stats;
+    background-image: url(imgs/player.png);
+  }
+
+  & .inventory {
+    grid-area: inventory;
+    background-image: url(imgs/golden-chest.png);
+  }
+
+  & .settings {
+    grid-area: settings;
+    background-image: url(imgs/settings.png);
+  }
+
+  & .xp {
+    grid-area: xp;
+    margin: 10px 2px;
+    cursor: default;
+    position: relative;
+
+    & .xp-bar {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: 1px;
+      left: 0;
+      width: 87%;
+      background-color: $xp;
+    }
+  }
+}
