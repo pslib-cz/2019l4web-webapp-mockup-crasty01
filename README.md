@@ -76,9 +76,17 @@
 </div>
 ```
 
+### HUD
+během hry se aktualuzuje:
+- score (.score>spa.)
+- životy čáselné (health>span)
+- životy procentuální (.health-bar[style="width:75%])
+- xp procentuální (.xp-bar[[style="width:75%]])
+
+
 ### OBJEKTY
 Veškeré objekty se umisťují jako <div> se třemi classami:
-- 1. classa určuje typ objektu
+- první classa určuje typ objektu
     - překážky
         - .wall 
         - .fence 
