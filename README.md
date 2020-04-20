@@ -114,6 +114,8 @@ Veškeré objekty se umisťují jako <div> se třemi classami:
 - třetí classa určuje svislou pozici  (0 - 19)
     - .row-3 = objekt je na čtvrtém řádku
 
+Po hitnutí nepřítele se na něj přidá a následně po 500ms odebere classa .hit
+
 ### UKÁZKY STAVU
 
 ![náhodná chvíle ze hry](./game.png)
