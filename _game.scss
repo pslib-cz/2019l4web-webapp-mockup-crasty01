@@ -1,0 +1,26 @@
+.screen {
+  position: relative;
+
+  &>div {
+    padding: calc(2px * #{$ratio});
+    image-rendering: pixelated;
+    width: $size;
+    height: $size;
+    position: absolute;
+    transition: left 250ms ease-in-out, top 250ms ease-in-out;
+
+    @for $i from 0 to 11 {
+      &.column-#{$i} {
+        left: calc(#{$i} * #{$size});
+      }
+    }
+
+    @for $i from 0 to 20 {
+      &.row-#{$i} {
+        top: calc(#{$i} * #{$size});
+      }
+    }
+  }
+
+
+}
