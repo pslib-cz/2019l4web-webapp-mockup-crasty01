@@ -292,75 +292,75 @@ img {
 }
 
 .player {
-  background-image: url(imgs/player.png);
+  background-image: url(../imgs/player.png);
 }
 
 .slime {
-  background-image: url(imgs/slime.png);
+  background-image: url(../imgs/slime.png);
 }
 
 .spider {
-  background-image: url(imgs/spider.png);
+  background-image: url(../imgs/spider.png);
 }
 
 .reaper {
-  background-image: url(imgs/reaper.png);
+  background-image: url(../imgs/reaper.png);
 }
 
 .fence {
-  background-image: url(imgs/fence.png);
+  background-image: url(../imgs/fence.png);
 }
 
 .crate {
-  background-image: url(imgs/crate.png);
+  background-image: url(../imgs/crate.png);
 }
 
 .coin {
-  background-image: url(imgs/coin.png);
+  background-image: url(../imgs/coin.png);
 }
 
 .chest {
-  background-image: url(imgs/chest.png);
+  background-image: url(../imgs/chest.png);
 }
 
 .skeleton {
-  background-image: url(imgs/skeleton.png);
+  background-image: url(../imgs/skeleton.png);
 }
 
 .door {
-  background-image: url(imgs/door.png);
+  background-image: url(../imgs/door.png);
 }
 
 .bat {
-  background-image: url(imgs/bat.png);
+  background-image: url(../imgs/bat.png);
 }
 
 .ghost {
-  background-image: url(imgs/ghost.png);
+  background-image: url(../imgs/ghost.png);
 }
 
 .wall {
-  background-image: url(imgs/wall.png);
+  background-image: url(../imgs/wall.png);
 }
 
 .tree {
-  background-image: url(imgs/tree.png);
+  background-image: url(../imgs/tree.png);
 }
 
 .stone-doors {
-  background-image: url(imgs/stone-door.png);
+  background-image: url(../imgs/stone-door.png);
 }
 
 .health-potion {
-  background-image: url(imgs/heatlh-potion.png);
+  background-image: url(../imgs/heatlh-potion.png);
 }
 
 .big-health-potion {
-  background-image: url(imgs/big-heatlh-potion.png);
+  background-image: url(../imgs/big-heatlh-potion.png);
 }
 
 .key {
-  background-image: url(imgs/key.png);
+  background-image: url(../imgs/key.png);
 }
 
 .down {
@@ -487,28 +487,28 @@ img {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: menu;
-  background-image: url(imgs/home.png);
+  background-image: url(../imgs/home.png);
 }
 
 .hud .stats {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: stats;
-  background-image: url(imgs/player.png);
+  background-image: url(../imgs/player.png);
 }
 
 .hud .inventory {
   -ms-grid-row: 1;
   -ms-grid-column: 4;
   grid-area: inventory;
-  background-image: url(imgs/golden-chest.png);
+  background-image: url(../imgs/golden-chest.png);
 }
 
 .hud .settings {
   -ms-grid-row: 1;
   -ms-grid-column: 5;
   grid-area: settings;
-  background-image: url(imgs/settings.png);
+  background-image: url(../imgs/settings.png);
 }
 
 .hud .xp {

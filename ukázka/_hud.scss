@@ -110,22 +110,22 @@
 
   & .home {
     grid-area: menu;
-    background-image: url(imgs/home.png);
+    background-image: url(../imgs/home.png);
   }
 
   & .stats {
     grid-area: stats;
-    background-image: url(imgs/player.png);
+    background-image: url(../imgs/player.png);
   }
 
   & .inventory {
     grid-area: inventory;
-    background-image: url(imgs/golden-chest.png);
+    background-image: url(../imgs/golden-chest.png);
   }
 
   & .settings {
     grid-area: settings;
-    background-image: url(imgs/settings.png);
+    background-image: url(../imgs/settings.png);
   }
 
   & .xp {
