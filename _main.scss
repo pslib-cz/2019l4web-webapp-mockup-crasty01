@@ -10,7 +10,6 @@ $size: calc(#{$ratio} * 32px);
 
 * {
   margin: 0;
-  font-family: Roboto;
   padding: 0;
   box-sizing: border-box;
   line-height: 120%;
@@ -22,6 +21,7 @@ $size: calc(#{$ratio} * 32px);
 
 html,
 body {
+  font-family: Roboto;
   scroll-behavior: smooth;
   width: 100%;
   min-height: 100vh;

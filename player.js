@@ -9,17 +9,21 @@ document.addEventListener('DOMContentLoaded', function () {
     let row = classes[2];
 
     switch (keyCode) {
+      case 'ArrowUp':
       case 'KeyW':
-        classPlusOne(row, -1)
+        classPlusOne(row, -1, 19);
         break;
       case 'KeyA':
-        classPlusOne(column, -1)
+      case 'ArrowLeft':
+        classPlusOne(column, -1, 10);
         break;
       case 'KeyS':
-        classPlusOne(row, +1)
+      case 'ArrowDown':
+        classPlusOne(row, +1, 19);
         break;
       case 'KeyD':
-        classPlusOne(column, +1)
+      case 'ArrowRight':
+        classPlusOne(column, +1, 10);
         break;
       default:
         console.log('Tohle tlačítko neznám!')
@@ -29,20 +33,17 @@ document.addEventListener('DOMContentLoaded', function () {
     player.className = classes.join(' ');
   });
 
-  function classPlusOne(array, num) {
+  function classPlusOne(array, num, max) {
     let oldArray = array;
     let tmp = array.split('-');
     let oldNum = Number(tmp[1]);
-    console.log(oldNum);
 
-    if ((oldNum > 1 && num == +1) || (oldNum < 11 && num == -1)) {
-      console.log(oldNum);
-      tmp[1] = oldNum + num;
+    if (oldNum > 0 && num === -1 || oldNum < max && num === +1) {
+      tmp[1] = Number(oldNum) + num;
       array = tmp[0] + '-' + tmp[1];
       classes.splice(classes.indexOf(oldArray), classes.indexOf(oldArray), array);
-      console.log(tmp);
-      return;
+    } else {
+      console.log('Dál už to nejde!');
     }
-    console.log('Dál už to nejde!');
   }
 })

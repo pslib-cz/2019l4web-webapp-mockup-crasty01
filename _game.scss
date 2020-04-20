@@ -1,12 +1,18 @@
 .screen {
   position: relative;
 
+  & .player {
+    z-index: 10;
+  }
+
   &>div {
     padding: calc(2px * #{$ratio});
     image-rendering: pixelated;
     width: $size;
     height: $size;
     position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
     transition: left 250ms ease-in-out, top 250ms ease-in-out;
 
     @for $i from 0 to 11 {
@@ -22,5 +28,26 @@
     }
   }
 
+  & .player,
+  & .skeleton,
+  & .slime,
+  & .bat,
+  & .ghost,
+  & .reaper,
+  & .spider {
+    background-size: calc(#{$size} / 32 * 28);
+    animation: idle 250ms alternate infinite ease-in-out;
+  }
 
+
+}
+
+@keyframes idle {
+  from {
+    transform: scale(1, calc(15/14));
+  }
+
+  to {
+    transform: scale(calc(15/14), 1);
+  }
 }
