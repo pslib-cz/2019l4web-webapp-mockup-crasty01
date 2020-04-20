@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: Pixel;
   src: url(pixel.ttf);
@@ -300,6 +299,14 @@ img {
   background-image: url(imgs/slime.png);
 }
 
+.spider {
+  background-image: url(imgs/spider.png);
+}
+
+.reaper {
+  background-image: url(imgs/reaper.png);
+}
+
 .fence {
   background-image: url(imgs/fence.png);
 }
@@ -336,8 +343,8 @@ img {
   background-image: url(imgs/wall.png);
 }
 
-.small-tree {
-  background-image: url(imgs/tree-smalĺ.png);
+.tree {
+  background-image: url(imgs/tree.png);
 }
 
 .stone-doors {
@@ -346,6 +353,14 @@ img {
 
 .health-potion {
   background-image: url(imgs/heatlh-potion.png);
+}
+
+.big-health-potion {
+  background-image: url(imgs/big-heatlh-potion.png);
+}
+
+.key {
+  background-image: url(imgs/key.png);
 }
 
 .down {

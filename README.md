@@ -7,17 +7,11 @@
 - Herní pole je čtvercový grid o jedenácti sloupcích, začínající ze shora (dole nemusí končit přesně).
 - Cílem je získat co nejvyšší skóre.
 - Skóre je určeno podle počtu řádků o které hráč postoupil směrem nahoru (každý řádek je připočten pouze jednou).
-- Cestou nahoru se hráč bude setkévat s nepřáteli. Ti budou mít odlišný způsob pohybu. pokud se hráč dostane příliš blížko (na vzdálenost 1 pole) nepřítel se pohne k hráči, potažmo zaůtočí.
+- Cestou nahoru se hráč bude setkévat s nepřáteli.  Pokud se hráč dostane příliš blížko (na vzdálenost 1 pole) nepřítel se pohne k hráči, tedy zaůtočí.
 - Útok nastane ve chvíli, kdy se hráč (nebo nepřítel) chce pohnout směrem ve kterém je nepřítel (hráč). První útočí hráč (= pokud nepřítele zabije na jednu ránu, nepřítel mu neubere životy).
-- Každý nepřítel má daný počet životů. Ty se odvyjí od druhu nepřítele a jejich levelu.
+- Každý nepřítel má daný počet životů. Ty se odvyjí od jejich levelu.
 - Level nepřátel se bude postupně zvyšovat (podle řádku na kterém se poprvé objeví).
-
-### SOUBOJ
 - Začíná ve chvíli, kdy se nepřítel snaží pohnout směrem na kterém stojí hráč nebo naopak.
-
-
-### NEPŘÍTEL
-- Začíná ve chvíli, když jste 
 
 ### BĚHEM HRY MŮŽETE JE MOŽNO VIDĚT
 - HUD
@@ -37,7 +31,6 @@
     - bonusy
         - bedny
         - krabice
-        - krystaly
         - peníze
         - lektvary
         - klíče
@@ -49,3 +42,66 @@
     - hráč
 
 ## IMPLEMENTACE
+
+```html
+<div class="all">
+    <div class="wrapper">
+      <div class="hud-wrapper">
+        <div class="up">
+          <div class="score">
+            <span>451</span>
+          </div>
+        </div>
+        <div class="down">
+          <nav class="hud">
+            <div class="health">
+              <span class="text-outline">60/80</span>
+              <div class="health-bar-wrapper">
+                <div class="health-bar" health="75%"></div>
+              </div>
+            </div>
+            <div class="home"></div>
+            <div class="stats"></div>
+            <div class="inventory"></div>
+            <div class="settings"></div>
+            <div class="xp">
+              <div class="xp-bar"></div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="game">
+      </div>
+    </div>
+</div>
+```
+
+### OBJEKTY
+Veškeré objekty se umisťují jako <div> se třemi classami:
+- 1. classa určuje typ objektu
+    - překážky
+        - .wall 
+        - .fence 
+        - .door 
+        - .stone-door 
+        - .tree 
+        - .crate
+    - bonusy
+        - .chest
+        - .coin
+        - .health-potion
+        - .big-health-potion
+        - .key
+    - enemy
+        - .slime
+        - .skeleton
+        - .bet
+        - .reaper
+        - .ghost
+        - .spider
+    - hráč
+        - .player
+- druhá classa určuje vodorovnou pozici (0 - 10)
+    - .column-3 = objekt je na čtvrtém sloupci
+- třetí classa určuje svislou pozici  (0 - 19)
+    - .row-3 = objekt je na čtvrtém řádku
